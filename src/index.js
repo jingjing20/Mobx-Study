@@ -11,8 +11,8 @@ class Store {
   @computed get mixed() {
     return store.string + '/' + store.number;
   }
-  //类比合并更新 不会多次更新
-  @action.bound bar() {
+  //action 合并更新 不会多次更新
+  @action.bound bar() {   //bound 能绑定this
     this.number = 1314;
     this.string = 'hao';
   }
